@@ -11,7 +11,7 @@ const userController = require('../controllers/userController');
 router.post('/register', userController.register);
 
 // Word
-router.get('/words', wordController.getWordList);
-router.post('/words/add', wordController.addWord);
+router.get('/', wordController.getWordList);
+router.post('/add', wordController.addWord);
 
 module.exports = router;
