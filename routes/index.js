@@ -8,10 +8,10 @@ const wordController = require('../controllers/wordController');
 const userController = require('../controllers/userController');
 
 // User
-router.post('/api/register', userController.register);
+router.post('/register', userController.register);
 
 // Word
-router.get('/api/words', wordController.getWordList);
-router.post('/api/words/add', wordController.addWord);
+router.get('/words', wordController.getWordList);
+router.post('/words/add', wordController.addWord);
 
 module.exports = router;
