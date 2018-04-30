@@ -20,10 +20,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(expressValidator());
 
-app.use('/words', routes);
-app.use('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '../client/dist/index.html'));
-});
+app.use('*', routes);
 
 app.use((err, req, res) => {
   res.json({ status: err.status || 500, message: err.message });
